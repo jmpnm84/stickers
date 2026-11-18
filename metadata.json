@@ -1,0 +1,6 @@
+{
+  "name": "Etiquetas",
+  "description": "Gerador e editor de folhas de etiquetas A4 (4x12) com preenchimento rápido, suporte multilíngue e impressão calibrada.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

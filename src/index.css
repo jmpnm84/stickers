@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@page {
+  size: A4 portrait;
+  margin: 0;
+}
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+}
+
+.font-mono-tabular {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.a4-page {
+  position: relative;
+  width: 210mm;
+  height: 297mm;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.label-box {
+  position: absolute;
+  border: 0.25mm dotted rgba(0, 0, 0, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  font-family: Calibri, Arial, sans-serif;
+  font-size: 8pt;
+  line-height: 1;
+  font-weight: 400;
+  color: #000000;
+  white-space: nowrap;
+}
+
+@media print {
+  html,
+  body {
+    width: 210mm !important;
+    height: 297mm !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-workspace {
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    display: block !important;
+  }
+
+  .print-scaler {
+    transform: none !important;
+    width: 210mm !important;
+    height: 297mm !important;
+    margin: 0 !important;
+  }
+
+  .a4-page {
+    box-shadow: none !important;
+    margin: 0 !important;
+    border: none !important;
+  }
+
+  .label-box {
+    border: none !important;
+  }
+}
