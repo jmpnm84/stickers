@@ -71,4 +71,10 @@ export interface TranslationSet {
   zoomOut: string;
   zoomIn: string;
   zoomReset: string;
+  installApp: string;
+  installIOS: string;
+  iosTitle: string;
+  iosStep1: string;
+  iosStep2: string;
+  offlineMode: string;
 }

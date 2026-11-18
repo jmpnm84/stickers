@@ -1,6 +1,7 @@
 import { HelpCircle, PencilLine, Printer, Tag } from 'lucide-react';
 import { LANGUAGE_OPTIONS } from '../data/translations';
 import { Language, TranslationSet } from '../types/labels';
+import { PWAInstallButton } from './PWAInstallButton';
 
 interface ToolbarProps {
   language: Language;
@@ -31,6 +32,8 @@ export function Toolbar({
       </div>
 
       <div className="flex items-center gap-2 shrink-0">
+        <PWAInstallButton t={t} />
+
         <button
           type="button"
           onClick={onOpenHelp}

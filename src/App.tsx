@@ -8,6 +8,7 @@ import { A4LabelSheet } from './components/A4LabelSheet';
 import { FillModal } from './components/FillModal';
 import { FormatSelectModal } from './components/FormatSelectModal';
 import { HelpModal } from './components/HelpModal';
+import { OfflineIndicator } from './components/OfflineIndicator';
 import { Toolbar } from './components/Toolbar';
 import { ZoomBar } from './components/ZoomBar';
 import {
@@ -152,6 +153,8 @@ export default function App() {
         onClose={() => setIsHelpOpen(false)}
         t={t}
       />
+
+      <OfflineIndicator t={t} />
     </div>
   );
 }
