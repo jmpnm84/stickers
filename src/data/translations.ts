@@ -1,10 +1,14 @@
 import { Language, TranslationSet } from '../types/labels';
 
-export const LANGUAGE_OPTIONS: Array<{ code: Language; flag: string; label: string }> = [
-  { code: 'pt', flag: '🇵🇹', label: 'PT' },
-  { code: 'es', flag: '🇪🇸', label: 'ES' },
-  { code: 'en', flag: '🇬🇧', label: 'EN' },
-  { code: 'fr', flag: '🇫🇷', label: 'FR' },
+export const LANGUAGE_OPTIONS: Array<{
+  code: Language;
+  label: string;
+  name: string;
+}> = [
+  { code: 'pt', label: 'PT', name: 'Português' },
+  { code: 'es', label: 'ES', name: 'Español' },
+  { code: 'en', label: 'EN', name: 'English' },
+  { code: 'fr', label: 'FR', name: 'Français' },
 ];
 
 export const TRANSLATIONS: Record<Language, TranslationSet> = {
@@ -59,6 +63,12 @@ export const TRANSLATIONS: Record<Language, TranslationSet> = {
     iosStep1: 'Toque no botão Partilhar na barra do Safari.',
     iosStep2: 'Desloque para baixo e toque em Adicionar ao ecrã principal.',
     offlineMode: 'Modo offline — A utilizar dados em cache.',
+    updateCheckAria: 'Procurar atualizações',
+    updateAvailable: 'Nova atualização disponível',
+    updateInstall: 'Atualizar',
+    updateUpToDate: 'A aplicação já está atualizada.',
+    updateChecking: 'A procurar atualização...',
+    later: 'Mais tarde',
   },
   es: {
     appName: 'Etiquetas',
@@ -111,6 +121,12 @@ export const TRANSLATIONS: Record<Language, TranslationSet> = {
     iosStep1: 'Pulse el botón Compartir en la barra de Safari.',
     iosStep2: 'Desplácese hacia abajo y pulse Añadir a pantalla de inicio.',
     offlineMode: 'Modo sin conexión — Usando datos en caché.',
+    updateCheckAria: 'Buscar actualizaciones',
+    updateAvailable: 'Nueva actualización disponible',
+    updateInstall: 'Actualizar',
+    updateUpToDate: 'La aplicación ya está actualizada.',
+    updateChecking: 'Buscando actualización...',
+    later: 'Más tarde',
   },
   en: {
     appName: 'Etiquetas',
@@ -163,6 +179,12 @@ export const TRANSLATIONS: Record<Language, TranslationSet> = {
     iosStep1: 'Tap the Share button in Safari toolbar.',
     iosStep2: 'Scroll down and tap Add to Home Screen.',
     offlineMode: 'Offline Mode — Cached data is being used.',
+    updateCheckAria: 'Check for updates',
+    updateAvailable: 'New update available',
+    updateInstall: 'Update',
+    updateUpToDate: 'The app is already up to date.',
+    updateChecking: 'Checking for update...',
+    later: 'Later',
   },
   fr: {
     appName: 'Etiquetas',
@@ -215,5 +237,11 @@ export const TRANSLATIONS: Record<Language, TranslationSet> = {
     iosStep1: "Appuyez sur le bouton Partager dans la barre d'outils de Safari.",
     iosStep2: "Faites défiler vers le bas et appuyez sur Sur l'écran d'accueil.",
     offlineMode: 'Mode hors ligne — Données en cache utilisées.',
+    updateCheckAria: 'Rechercher des mises à jour',
+    updateAvailable: 'Nouvelle mise à jour disponible',
+    updateInstall: 'Mettre à jour',
+    updateUpToDate: "L'application est déjà à jour.",
+    updateChecking: 'Recherche de mise à jour...',
+    later: 'Plus tard',
   },
 };

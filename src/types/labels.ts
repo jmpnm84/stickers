@@ -77,4 +77,10 @@ export interface TranslationSet {
   iosStep1: string;
   iosStep2: string;
   offlineMode: string;
+  updateCheckAria: string;
+  updateAvailable: string;
+  updateInstall: string;
+  updateUpToDate: string;
+  updateChecking: string;
+  later: string;
 }

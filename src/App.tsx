@@ -10,6 +10,7 @@ import { FormatSelectModal } from './components/FormatSelectModal';
 import { HelpModal } from './components/HelpModal';
 import { OfflineIndicator } from './components/OfflineIndicator';
 import { Toolbar } from './components/Toolbar';
+import { UpdateBanner } from './components/UpdateBanner';
 import { ZoomBar } from './components/ZoomBar';
 import {
   createFullLabelSet,
@@ -17,6 +18,7 @@ import {
   GRID_CONFIGS,
 } from './data/gridConfig';
 import { TRANSLATIONS } from './data/translations';
+import { usePWAUpdate } from './hooks/usePWAUpdate';
 import { LabelFormat, LabelValues, Language } from './types/labels';
 
 const A4_WIDTH_PX = 794;
@@ -51,6 +53,15 @@ export default function App() {
   const [activeLabels, setActiveLabels] = useState<Set<number>>(() =>
     createFullLabelSet(GRID_CONFIGS['4x12'].totalLabels)
   );
+
+  const {
+    needRefresh,
+    showBanner,
+    feedback,
+    checkForUpdates,
+    applyUpdate,
+    dismissBanner,
+  } = usePWAUpdate();
 
   const t = TRANSLATIONS[language];
 
@@ -107,8 +118,19 @@ export default function App() {
         language={language}
         onLanguageChange={setLanguage}
         onOpenHelp={() => setIsHelpOpen(true)}
+        onCheckUpdate={checkForUpdates}
+        updateAvailable={needRefresh}
+        updateFeedback={feedback}
         onOpenFill={handleOpenFillFlow}
         onPrint={handlePrint}
+        t={t}
+      />
+
+      <UpdateBanner
+        showAvailableBanner={showBanner}
+        feedback={feedback}
+        onApplyUpdate={applyUpdate}
+        onDismiss={dismissBanner}
         t={t}
       />
 
